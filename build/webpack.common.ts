@@ -11,7 +11,7 @@ export const config: webpack.Configuration = {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
     path: paths.outputPath,
-    publicPath: 'bundle/'
+    publicPath: 'Content/bundle/'
   },
   optimization: {
     splitChunks: {

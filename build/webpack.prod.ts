@@ -8,13 +8,13 @@ export const config: webpack.Configuration = {
     mode: 'production',
     node: false,
     output: {
-      publicPath: 'content/bundle/',
+        publicPath: 'Content/bundle/',
     },
     devtool: 'source-map',
     module: {
         rules: [{
-            test: /\.css/,
-            use: [{ loader: MiniCssExtractPlugin.loader }, { loader: 'css-loader' }, { loader: 'postcss-loader' }],
+            test: /\.css$/i,
+            use: [{ loader: MiniCssExtractPlugin.loader }, 'css-loader', 'postcss-loader'],
         },],
     },
     optimization: {
@@ -30,12 +30,12 @@ export const config: webpack.Configuration = {
     },
     plugins: [
         new webpack.IgnorePlugin({}),
-        // new MiniCssExtractPlugin({
-        //     // Options similar to the same options in webpackOptions.output
-        //     // both options are optional
-        //     filename: 'style.css',
-        //     chunkFilename: '[id].[hash].css',
-        //   }),
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: 'styles.css',
+            chunkFilename: '[id].[hash].css',
+          }),
 
         new CompressionWebpackPlugin({
             filename: "[path][base].gz",

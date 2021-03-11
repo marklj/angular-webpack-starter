@@ -11,10 +11,10 @@ const config = (env: any) => {
     return addonsArray.map((addonName: string) => require(`./build/addons/webpack.${addonName}.js`));
   };
 
-  console.log(env);
+  // console.log(env);
   const envConfig = require(`./build/webpack.${env.env}.ts`);
   const mergedConfig = merge<webpack.Configuration>(commonConfig, envConfig.config, ...addons(env.addons));
-  console.log(mergedConfig);
+  // console.log(mergedConfig);
 
   return mergedConfig;
 }

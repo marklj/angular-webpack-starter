@@ -12,7 +12,7 @@ export const config: webpack.Configuration = {
     rules: [{
       test: /\.css/,
       use: [
-        'style-loader',
+        { loader: 'style-loader'},
         'css-loader',
         'postcss-loader',
       ],
