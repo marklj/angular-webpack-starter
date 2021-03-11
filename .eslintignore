@@ -1,0 +1,6 @@
+build/**/*.ts
+node_modules/**/*.js
+node_modules/**/*.ts
+
+*.spec.ts
+webpack.config.ts
