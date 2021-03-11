@@ -40,11 +40,12 @@ export const config: webpack.Configuration = {
       {
         test: /\.ts$/,
         exclude: /(node_modules)/,
-        use: [
-          {
-            loader: 'ts-loader',
-          }
-        ]
+        use: ['ts-loader', 'angular2-template-loader']
+      },
+      {
+        test: /\.(html)$/,
+        use: 'html-loader',
+        exclude: /(node_modules|cache|Views)/,
       },
       {
         test: /\.(woff|woff2|eot)$/,
@@ -84,20 +85,6 @@ export const config: webpack.Configuration = {
           stripdeclarations: true,
           iesafe: true,
         }
-      },
-      {
-        test: /\.(html)$/,
-        exclude: /(node_modules|cache|Views)/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: {
-              minimize: true,
-              root: paths.projectRoot,
-              attrs: ['img:src'],
-            },
-          },
-        ],
       },
     ]
   },
