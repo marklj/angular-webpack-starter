@@ -50,5 +50,8 @@
   "version": "1.0.0",
   "author": "Mark Johnson",
   "license": "MIT",
-  "description": "A configurable Webpack Angular starter project"
+  "description": "A configurable Webpack Angular starter project",
+  "repository": {
+    "url": "https://github.com/marklj/angular-webpack-starter"
+  }
 }
