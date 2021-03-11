@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "allowJs": true,
+    "types": [
+      "jest",
+      "node"
+    ]
+  },
+  "files": [
+    // "Scripts/polyfills.ts"
+  ],
+  "include": [
+    "Scripts/**/*.spec.ts",
+    "Scripts/**/*.mock.ts",
+    "Scripts/**/*.d.ts"
+  ]
+}
